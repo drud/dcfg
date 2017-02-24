@@ -31,7 +31,7 @@ dcfg run install uninstall
 
   -	user (not implemented yet)
 
-       Will allow you to set the user the Task Set shoudl be run as.
+       Will allow you to set the user the Task Set should be run as.
 
   -	workdir
 
@@ -84,7 +84,11 @@ For instance, the four currently existing plugins implement these actions:
        Replace a string with another in a file. Works with regex.
 
   - config
-       Add or change values in a config file
+       Add or change values in a config file.
+  
+  - template
+      Configure an application in the container. Currently provides plugins for Drupal and WordPress.
+      Template provides its own set of attributes, see [Template Task Type](docs/template-task-type.md) for details.
 
 
 These actions when defined in the drud.yaml look like this:

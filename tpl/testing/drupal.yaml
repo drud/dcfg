@@ -1,0 +1,54 @@
+- name: default
+  tasks:
+    - action: template
+      app: drupal
+      ignoreFiles: true
+
+- name: drupal8
+  tasks:
+    - action: template
+      app: drupal
+      core: 8.x
+      ignoreFiles: true
+
+- name: ddev_configured
+  env:
+    DEPLOY_URL: $DEPLOY_URL
+    DB_NAME: $DB_NAME
+    appType: drupal
+  tasks:
+    - action: template
+      app: '{{.appType}}'
+      siteURL: '{{.DEPLOY_URL}}'
+      databaseName: '{{.DB_NAME}}'
+      ignoreFiles: true
+
+- name: weird_file_dir
+  tasks:
+    - action: template
+      app: drupal
+      publicFiles: potato
+
+- name: have_docroot
+  tasks:
+    - action: template
+      app: drupal
+      docroot: docroot
+      ignoreFiles: true
+
+- name: all_the_things
+  tasks:
+    - action: template
+      app: drupal
+      core: 8.x
+      docroot: potato
+      deployURL: http://www.potatocakes.com
+      publicFiles: potato_pub
+      configSyncDir: /var/www/html/potato_conf
+      databaseName: potato
+      databaseUsername: spud
+      databasePassword: spudtato
+      databaseHost: potatodb.com
+      databaseDriver: mysql
+      databasePort: 1234
+      databasePrefix: spud_

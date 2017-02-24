@@ -3,10 +3,22 @@
 	"ignore": "test",
 	"package": [
 		{
-			"checksumSHA1": "yXrS4e4yxaRBu/MX+39X3cS4kbg=",
+			"checksumSHA1": "NjT1+st86Z4sgWy1JuMyk0fdDDM=",
+			"path": "github.com/Masterminds/sprig",
+			"revision": "c974324bb59b465f00b128a055656d44f60e4ffc",
+			"revisionTime": "2017-01-30T19:30:58Z"
+		},
+		{
+			"checksumSHA1": "cT6+XPBZiXsFbb7cXT6AYNrZyuM=",
 			"path": "github.com/Sirupsen/logrus",
-			"revision": "a283a10442df8dc09befd873fab202bf8a253d6a",
-			"revisionTime": "2016-07-16T02:56:31Z"
+			"revision": "3f603f494d61c73457fb234161d8982b9f0f0b71",
+			"revisionTime": "2017-02-07T18:34:08Z"
+		},
+		{
+			"checksumSHA1": "ryixco0k3QlLFtp7a1x2jznl7OY=",
+			"path": "github.com/aokoli/goutils",
+			"revision": "9c37978a95bd5c709a15883b6242714ea6709e64",
+			"revisionTime": "2014-05-02T00:11:28Z"
 		},
 		{
 			"checksumSHA1": "7OCBbeztrwhJCOKXTWTdp7+lAHY=",
@@ -22,10 +34,22 @@
 			"revisionTime": "2016-09-25T22:06:09Z"
 		},
 		{
-			"checksumSHA1": "Q21pr+fQqg/YMq2AvgLz4tVRkwg=",
-			"path": "github.com/drud/drud-go/utils",
-			"revision": "4c4964f771560040032ea987fce9839b8be8aca0",
-			"revisionTime": "2016-10-04T01:03:44Z"
+			"checksumSHA1": "t01l9GMxPPn/ThMgpk9pWkzjm4g=",
+			"path": "github.com/drud/drud-go/utils/pretty",
+			"revision": "9b67ecb34ec7765e28a6db1cf8bcfb4323c6f4f9",
+			"revisionTime": "2017-02-09T02:13:43Z"
+		},
+		{
+			"checksumSHA1": "iAwuw+lHePVbzI7mb80cdsO5Le4=",
+			"path": "github.com/drud/drud-go/utils/stringutil",
+			"revision": "9b67ecb34ec7765e28a6db1cf8bcfb4323c6f4f9",
+			"revisionTime": "2017-02-09T02:13:43Z"
+		},
+		{
+			"checksumSHA1": "dEwm+7KMFrQIqOEMsjePRNAEwUI=",
+			"path": "github.com/drud/drud-go/utils/system",
+			"revision": "e2f633b15659dafd4bf00e809516d7261e9eb1cc",
+			"revisionTime": "2017-02-08T00:41:31Z"
 		},
 		{
 			"checksumSHA1": "KOThXqDanFZmWCmJsOGrpVIdpPo=",
@@ -34,11 +58,29 @@
 			"revisionTime": "2016-03-07T21:52:05Z"
 		},
 		{
+			"checksumSHA1": "40vJyUB4ezQSn/NSadsKEOrudMc=",
+			"path": "github.com/inconshreveable/mousetrap",
+			"revision": "76626ae9c91c4f2a10f34cad8ce83ea42c93bb75",
+			"revisionTime": "2014-10-17T20:07:13Z"
+		},
+		{
+			"checksumSHA1": "R8z+BOS81hOWgcqymuVWHNta/yc=",
+			"path": "github.com/oleiade/reflections",
+			"revision": "0e86b3c98b2ff33e30c85cfe97d9a63d439fe7eb",
+			"revisionTime": "2016-08-17T07:03:35Z"
+		},
+		{
 			"checksumSHA1": "zKKp5SZ3d3ycKe4EKMNT0BqAWBw=",
 			"origin": "github.com/stretchr/testify/vendor/github.com/pmezard/go-difflib/difflib",
 			"path": "github.com/pmezard/go-difflib/difflib",
 			"revision": "976c720a22c8eb4eb6a0b4348ad85ad12491a506",
 			"revisionTime": "2016-09-25T22:06:09Z"
+		},
+		{
+			"checksumSHA1": "zmC8/3V4ls53DJlNTKDZwPSC/dA=",
+			"path": "github.com/satori/go.uuid",
+			"revision": "b061729afc07e77a8aa4fad0a2fd840958f1942a",
+			"revisionTime": "2016-09-27T10:08:44Z"
 		},
 		{
 			"checksumSHA1": "fEGgcE+iSzLkxdrbRj7j/vV7a7E=",
@@ -59,10 +101,16 @@
 			"revisionTime": "2016-09-25T22:06:09Z"
 		},
 		{
-			"checksumSHA1": "u4rtURsE9Cn7TK4OPwH8axBMK6M=",
+			"checksumSHA1": "uTQtOqR0ePMMcvuvAIksiIZxhqU=",
 			"path": "golang.org/x/sys/unix",
-			"revision": "8d1157a435470616f975ff9bb013bea8d0962067",
-			"revisionTime": "2016-10-06T02:47:49Z"
+			"revision": "7a6e5648d140666db5d920909e082ca00a87ba2c",
+			"revisionTime": "2017-02-01T04:15:14Z"
+		},
+		{
+			"checksumSHA1": "6Rfu8Y/96ALpk4VIC1dK3uo+WYc=",
+			"path": "gopkg.in/oleiade/reflections.v1",
+			"revision": "2b6ec3da648e3e834dc41bad8d9ed7f2dc6a9496",
+			"revisionTime": "2016-08-17T06:38:38Z"
 		}
 	],
 	"rootPath": "github.com/drud/dcfg"

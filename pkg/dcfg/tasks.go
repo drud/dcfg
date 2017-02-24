@@ -1,6 +1,6 @@
-// Package dcfglib groups.go - The TaskSet and TaskSetList types represent the blocks of commands
+// Package dcfg groups.go - The TaskSet and TaskSetList types represent the blocks of commands
 // contained in your drud.yaml(e.g. the install and uninstall examples from the readne).
-package dcfglib
+package dcfg
 
 import (
 	"bytes"
@@ -67,7 +67,7 @@ func (g *TaskSet) Run() error {
 			fmt.Println(err)
 		}
 
-		// each plugin is registed in the plugins.TypeMap which will use the action string
+		// each plugin is registered in the plugins.TypeMap which will use the action string
 		// as the index in order to get the plugin it is mapped to
 		action := plugins.TypeMap[cmdType.Action]
 		err = json.Unmarshal([]byte(taskString), &action)

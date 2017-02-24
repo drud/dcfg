@@ -2,7 +2,7 @@
 // This software is under the Apacher 2.0 License.
 // Original code can be found here: https://github.com/aws/aws-sdk-go/blob/master/aws/awsutil/prettify.go
 
-package utils
+package pretty
 
 import (
 	"bytes"

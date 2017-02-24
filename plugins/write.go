@@ -7,10 +7,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/drud/drud-go/utils"
+	"github.com/drud/drud-go/utils/pretty"
 )
 
-// Write imlpements the Write Action
+// Write implements the Write Action
 type Write struct {
 	TaskDefaults
 	Write string      `yaml:"write"`
@@ -18,7 +18,7 @@ type Write struct {
 }
 
 func (w Write) String() string {
-	return utils.Prettify(w)
+	return pretty.Prettify(w)
 }
 
 // Run uses the data stored in the Write struct to execute the Write command

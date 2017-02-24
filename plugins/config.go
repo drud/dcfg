@@ -8,9 +8,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/drud/drud-go/utils"
+	"github.com/drud/drud-go/utils/pretty"
 )
 
+// Config implements the Config Action
 type Config struct {
 	TaskDefaults
 	Delim string            `yaml:"delim"` // what separates the key and value for this config?
@@ -18,7 +19,7 @@ type Config struct {
 }
 
 func (c Config) String() string {
-	return utils.Prettify(c)
+	return pretty.Prettify(c)
 }
 
 // Run executes the command task

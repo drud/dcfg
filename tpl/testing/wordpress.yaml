@@ -1,0 +1,56 @@
+- name: default
+  tasks:
+    - action: template
+      app: wordpress
+
+- name: ddev_configured
+  env:
+    DEPLOY_URL: $DEPLOY_URL
+    DB_NAME: $DB_NAME
+    appType: wordpress
+  tasks:
+    - action: template
+      app: '{{.appType}}'
+      siteURL: '{{.DEPLOY_URL}}'
+      databaseName: '{{.DB_NAME}}'
+      ignoreFiles: true
+
+- name: custom_core_dir
+  tasks:
+    - action: template
+      app: wordpress
+      coreDir: /mycore
+
+- name: custom_content_dir
+  tasks:
+    - action: template
+      app: wordpress
+      contentDir: potatoes
+
+- name: custom_upload_dir
+  tasks:
+    - action: template
+      app: wordpress
+      uploadDir: media
+
+- name: has_docroot
+  tasks:
+    - action: template
+      app: wordpress
+      docroot: docroot
+
+- name: im_so_special
+  tasks:
+    - action: template
+      coreDir: /mycore
+      contentDir: potatoes
+      uploadDir: media
+      docroot: docroot
+      siteURL: http://www.potatocakes.com
+      databaseName: potato
+      databaseUsername: spud
+      databasePassword: spudtato
+      databaseHost: potatodb.com
+      databaseDriver: mysql
+      databasePort: 1234
+      databasePrefix: spud_

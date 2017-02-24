@@ -6,9 +6,10 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/drud/drud-go/utils"
+	"github.com/drud/drud-go/utils/pretty"
 )
 
+// Replace implements the Replace Action
 type Replace struct {
 	TaskDefaults
 	Find    string `yaml:"find"`    // the needle or a regular expression
@@ -16,7 +17,7 @@ type Replace struct {
 }
 
 func (r Replace) String() string {
-	return utils.Prettify(r)
+	return pretty.Prettify(r)
 }
 
 // Run executes the command task

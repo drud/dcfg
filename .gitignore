@@ -3,3 +3,13 @@ dcfg-darwin
 dcfg-linux
 drud.yaml
 testing/dcfg.yaml
+.go/
+bin/
+.container*
+.push*
+linux
+darwin
+.dockerfile
+VERSION.txt
+.docker_image
+debug

@@ -2,15 +2,18 @@
 // which when implemented can add functionality to the dcfg tool
 package plugins
 
-import "github.com/drud/drud-go/utils"
+import (
+	"github.com/drud/dcfg/tpl"
+	"github.com/drud/drud-go/utils/pretty"
+)
 
-// Action is the interface that eash plugin must implement
+// Task is the interface that eash plugin must implement
 type Task interface {
 	String() string
 	Run() error
 }
 
-// Task is a parent type that can be used in new plugins to import these common feilds
+// TaskDefaults is a parent type that can be used in new plugins to import these common feilds
 type TaskDefaults struct {
 	Name    string `yaml:"name"`    // name of the task
 	Dest    string `yaml:"dest"`    // what this action will be performed on
@@ -22,7 +25,7 @@ type TaskDefaults struct {
 
 // String prints the Task
 func (t TaskDefaults) String() string {
-	return utils.Prettify(t)
+	return pretty.Prettify(t)
 }
 
 // TaskType is used so we can choose which Action implementation to use
@@ -32,8 +35,9 @@ type TaskType struct {
 
 // TypeMap is used to retrieve the correct plugin
 var TypeMap = map[string]Task{
-	"command": &Command{},
-	"write":   &Write{},
-	"replace": &Replace{},
-	"config":  &Config{},
+	"command":  &Command{},
+	"write":    &Write{},
+	"replace":  &Replace{},
+	"config":   &Config{},
+	"template": &tpl.Config{},
 }
